@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('input[type=button]').click(function(){ 
+				hideN($('input[type=text]').val());	
+				
+			});
+			function hideN(n){ 
+				var $p = $('p'); 
+				for(var i = 1; i <= 20 ; i++){ 
+					if(i%n == 0){ //  проверка дали се дели
+						$p.eq(i-1).hide(); // скриваме предходния елемент от масива
+						
+					} else {
+						$p.eq(i-1).addClass('label label-info'); 
+					}
+				}
+			}
+		});
+	</script>
+</head>
+<body>
+	<input type="text" class="form-control" placeholder="Add Number"/>
+	<input type="button" class="btn btn-primary" value="Click">
+
+	<p>This line of text is meant to be treated as fine print. 1</p>
+	<p>This line of text is meant to be treated as fine print. 2</p>
+	<p>This line of text is meant to be treated as fine print. 3</p>
+	<p>This line of text is meant to be treated as fine print. 4</p>
+	<p>This line of text is meant to be treated as fine print. 5</p>
+	<p>This line of text is meant to be treated as fine print. 6</p>
+	<p>This line of text is meant to be treated as fine print. 7</p>
+	<p>This line of text is meant to be treated as fine print. 8</p>
+	<p>This line of text is meant to be treated as fine print. 9</p>
+	<p>This line of text is meant to be treated as fine print. 10</p>
+	<p>This line of text is meant to be treated as fine print. 11</p>
+	<p>This line of text is meant to be treated as fine print. 12</p>
+	<p>This line of text is meant to be treated as fine print. 13</p>
+	<p>This line of text is meant to be treated as fine print. 14</p>
+	<p>This line of text is meant to be treated as fine print. 15</p>
+	<p>This line of text is meant to be treated as fine print. 16</p>
+	<p>This line of text is meant to be treated as fine print. 17</p>
+	<p>This line of text is meant to be treated as fine print. 18</p>
+	<p>This line of text is meant to be treated as fine print. 19</p>
+	<p>This line of text is meant to be treated as fine print. 20</p>	
+</body>	
+</html>
